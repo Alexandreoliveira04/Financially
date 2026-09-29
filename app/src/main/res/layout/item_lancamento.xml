@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="@dimen/altura_item_lista">
+
+    <FrameLayout
+        android:id="@+id/frame_situacao"
+        android:layout_width="@dimen/alvo_minimo_toque"
+        android:layout_height="@dimen/alvo_minimo_toque"
+        android:layout_marginStart="-6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/bolinha_situacao"
+            android:layout_width="@dimen/tamanho_bolinha"
+            android:layout_height="@dimen/tamanho_bolinha"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_situacao_vazia" />
+
+        <ImageView
+            android:id="@+id/icone_check"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_categoria"
+        android:layout_width="@dimen/tamanho_icone_categoria"
+        android:layout_height="@dimen/tamanho_icone_categoria"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/frame_situacao"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icone_categoria"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_cat_shopping_cart" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/col_textos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_valor"
+        app:layout_constraintStart_toEndOf="@id/frame_categoria"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_descricao"
+                style="@style/TextoItemLista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Mercado do mês" />
+
+            <TextView
+                android:id="@+id/tv_badge_parcela"
+                style="@style/Metadado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:visibility="gone"
+                tools:text="3/12"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_metadado"
+            style="@style/Metadado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="mercado · itaú" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_valor"
+        style="@style/TextoValorLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="-412,60" />
+
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/linha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/frame_situacao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

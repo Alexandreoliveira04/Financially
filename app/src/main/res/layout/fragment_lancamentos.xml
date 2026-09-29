@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- Cabeçalho -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margem_lateral"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_mes_ano"
+            style="@style/RotuloMono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mes_referencia" />
+
+        <TextView
+            android:id="@+id/tv_saldo"
+            style="@style/TextoSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:contentDescription="@string/desc_saldo_mes"
+            tools:text="R$ 4.812,35" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/RotuloMono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/entradas" />
+
+                <TextView
+                    android:id="@+id/tv_entradas"
+                    style="@style/TextoValorLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/menta"
+                    android:textSize="19sp"
+                    tools:text="+5.200,00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/RotuloMono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saidas" />
+
+                <TextView
+                    android:id="@+id/tv_saidas"
+                    style="@style/TextoValorLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/coral"
+                    android:textSize="19sp"
+                    tools:text="-3.480,00" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Abas de filtro -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/margem_lateral">
+
+        <LinearLayout
+            android:id="@+id/tab_todos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="@dimen/alvo_minimo_toque"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tab_todos"
+                style="@style/TextoCorpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="12dp"
+                android:text="@string/filtro_todos"
+                android:textColor="@color/lavanda" />
+
+            <View
+                android:id="@+id/underline_todos"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/lavanda" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_receitas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="@dimen/alvo_minimo_toque"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tab_receitas"
+                style="@style/TextoCorpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="12dp"
+                android:text="@string/filtro_receitas"
+                android:textColor="@color/texto_apoio" />
+
+            <View
+                android:id="@+id/underline_receitas"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/lavanda"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_despesas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="@dimen/alvo_minimo_toque"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tab_despesas"
+                style="@style/TextoCorpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="12dp"
+                android:text="@string/filtro_despesas"
+                android:textColor="@color/texto_apoio" />
+
+            <View
+                android:id="@+id/underline_despesas"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/lavanda"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/linha" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lancamentos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/margem_lateral"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        tools:listitem="@layout/item_lancamento" />
+
+</LinearLayout>

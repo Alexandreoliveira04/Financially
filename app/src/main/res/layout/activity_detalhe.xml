@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/fundo"
+            android:elevation="0dp"
+            app:navigationContentDescription="@string/desc_voltar"
+            app:navigationIcon="@drawable/ic_voltar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margem_lateral">
+
+            <FrameLayout
+                android:id="@+id/frame_categoria"
+                android:layout_width="@dimen/tamanho_icone_categoria_grande"
+                android:layout_height="@dimen/tamanho_icone_categoria_grande"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/icone_categoria"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/ic_cat_laptop" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/familia_outfit_semibold"
+                android:textColor="@color/texto_principal"
+                android:textSize="22sp"
+                tools:text="Notebook" />
+
+            <TextView
+                android:id="@+id/tv_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/familia_mono_semibold"
+                android:textSize="26sp"
+                tools:text="-R$ 198,00"
+                tools:textColor="@color/coral" />
+
+            <LinearLayout
+                android:id="@+id/container_pilulas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/card_detalhes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextoItemLista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/titulo_detalhes"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/container_kv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_parcelamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    style="@style/TextoItemLista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/titulo_parcelamento"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_parcelamento"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progress_parcelamento"
+                    tools:progress="50" />
+
+                <TextView
+                    android:id="@+id/tv_parcelas_pagas"
+                    style="@style/Metadado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="10.5sp"
+                    tools:text="3 DE 6 PAGAS" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
