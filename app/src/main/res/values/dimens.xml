@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margem_lateral">18dp</dimen>
+    <dimen name="espaco_entre_cards">12dp</dimen>
+    <dimen name="altura_item_lista">60dp</dimen>
+    <dimen name="altura_botao">52dp</dimen>
+    <dimen name="tamanho_bolinha">23dp</dimen>
+    <dimen name="alvo_minimo_toque">48dp</dimen>
+    <dimen name="raio_card">18dp</dimen>
+    <dimen name="raio_card_interno">13dp</dimen>
+    <dimen name="raio_pilula">7dp</dimen>
+    <dimen name="tamanho_icone_categoria">36dp</dimen>
+    <dimen name="raio_icone_categoria">12dp</dimen>
+    <dimen name="tamanho_icone_categoria_grande">48dp</dimen>
+    <dimen name="raio_icone_categoria_grande">16dp</dimen>
+    <dimen name="largura_chave">96dp</dimen>
+</resources>

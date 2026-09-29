@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Financially</string>
+
+    <!-- Lançamentos -->
+    <string name="mes_referencia">SETEMBRO 2026</string>
+    <string name="desc_saldo_mes">Saldo do mês</string>
+    <string name="entradas">ENTRADAS</string>
+    <string name="saidas">SAÍDAS</string>
+    <string name="filtro_todos">Todos</string>
+    <string name="filtro_receitas">Receitas</string>
+    <string name="filtro_despesas">Despesas</string>
+    <string name="desc_situacao_pago">pago</string>
+    <string name="desc_situacao_a_pagar">a pagar</string>
+    <string name="desc_icone_categoria">Categoria: %1$s</string>
+
+    <!-- Detalhe -->
+    <string name="desc_voltar">Voltar</string>
+    <string name="titulo_detalhes">Detalhes</string>
+    <string name="titulo_parcelamento">Parcelamento</string>
+    <string name="chave_conta">CONTA</string>
+    <string name="chave_data">DATA</string>
+    <string name="chave_situacao">SITUAÇÃO</string>
+    <string name="chave_observacao">OBSERVAÇÃO</string>
+    <string name="situacao_paga">Paga</string>
+    <string name="situacao_a_pagar">A pagar</string>
+    <string name="parcelas_pagas_formato">%1$d de %2$d pagas</string>
+    <string name="pilula_parcela_formato">Parcela %1$d de %2$d</string>
+    <string name="receita_label">Receita</string>
+    <string name="despesa_label">Despesa</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Superfícies -->
+    <color name="fundo">#0E0E12</color>
+    <color name="superficie">#17171D</color>
+    <color name="superficie_interna">#1E1E26</color>
+    <color name="linha">#272733</color>
+    <color name="linha_destaque">#33333F</color>
+
+    <!-- Texto -->
+    <color name="texto_principal">#ECEAF3</color>
+    <color name="texto_secundario">#9895A8</color>
+    <color name="texto_apoio">#827F95</color>
+
+    <!-- Marca -->
+    <color name="lavanda">#C7B2F7</color>
+    <color name="lavanda_esmaecida">#8E7BC0</color>
+    <color name="sobre_lavanda">#1A1424</color>
+    <color name="lavanda_wash">#21C7B2F7</color>
+    <color name="lavanda_borda">#4DC7B2F7</color>
+
+    <!-- Semânticas -->
+    <color name="menta">#89DCB2</color>
+    <color name="coral">#F0A096</color>
+    <color name="ambar">#E8C07A</color>
+
+    <!-- Categorias -->
+    <color name="cat_azul">#8AA9F0</color>
+    <color name="cat_violeta">#B79BF0</color>
+    <color name="cat_orquidea">#D9A3D5</color>
+    <color name="cat_coral">#F0A096</color>
+    <color name="cat_ambar">#E8C07A</color>
+    <color name="cat_menta">#89DCB2</color>
+    <color name="cat_turquesa">#7FC8D9</color>
+    <color name="cat_cinza">#98A0B0</color>
+</resources>
